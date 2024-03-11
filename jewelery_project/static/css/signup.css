@@ -1,0 +1,26 @@
+body {
+    background: url(../img/bg.jpg);
+  }
+  
+  
+.btn1 {
+    width: 20%; /* Adjust width as needed */
+    padding: 10px 15px;
+    color: #FFFFFF;
+    background: #4CAF50;
+    font-size: 14px;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px; /* Add border radius for a more expressive look */
+  }
+
+  .btn1:hover, .btn1:active, .btn1:focus {
+    background: #43A047;
+  }
+
+.log{
+    color: #4CAF50;
+    text-decoration: none;
+  }

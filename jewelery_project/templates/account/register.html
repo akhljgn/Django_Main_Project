@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load static %}
+  {% block css %}
+  <link rel="stylesheet" href="{% static 'css/signup.css' %}">
+  {% endblock %}
+    {% block content %}
+
+      <div class="container py-5">
+        <div class="col-md-8 offset-2">
+
+        <h1 class="mb-5">Create Your Account</h1>
+        
+        
+        <div class="card mb-4" id="forms">
+          <div class="card-header">
+            <small>
+            With a this account, you can save time during checkout, access your shopping bag from any device and view your order history.
+            </small>
+          </div>
+          <div class="card-body">
+
+            {% include 'partials/_messages.html' %}
+
+            
+            <form method="post">
+              {% csrf_token %}
+              <div class="form-group">
+                  <label for="username">Username:</label>
+                  <input type="text" id="username" name="username" class="form-control" required>
+              </div>
+              <div class="form-group">
+                  <label for="email">Email:</label>
+                  <input type="email" id="email" name="email" class="form-control" required>
+              </div>
+              <div class="form-group">
+                  <label for="password1">Password:</label>
+                  <input type="password" id="password1" name="password1" class="form-control" required>
+              </div>
+              <div class="form-group">
+                  <label for="password2">Confirm Password:</label>
+                  <input type="password" id="password2" name="password2" class="form-control" required>
+              </div>
+              <button class="btn1" type="submit">Submit</button>
+          </form>
+
+            <hr>
+
+            Already have an account? <a class="log" href="{% url 'store:login' %}">Signin </a>
+            
+          </div>
+        </div>
+
+        </div>       
+      </div>
+{% endblock content %}
+
