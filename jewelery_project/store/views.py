@@ -9,6 +9,8 @@ from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
 
 # Create your views here.
+# djangoAdmin : supra
+# pw: supra
 
 
 def home(request):
